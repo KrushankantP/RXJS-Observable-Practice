@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DesignUtilityService} from '../../appServices/design-utility.service';
-import {of} from 'rxjs';
+import {from, of} from 'rxjs';
 
 @Component({
   selector: 'app-of-from',
@@ -25,6 +25,36 @@ export class OfFromComponent implements OnInit {
     Obs2.subscribe(res=>{
       this.obsMsg = res;
       console.log('obsMSg =>', res);
+    })
+
+
+    // From - Array
+      let Arr = ['Atmiyata','Shuhardbhav','Ekta']
+    const Obs3= from(Arr);
+    Obs3.subscribe(res=>{
+      console.log('From Array =>', res);
+      this._designUtility.print(res, 'elContainer3')
+    })
+
+    // From - Promise
+
+    const promise = new  Promise(resolve =>  {
+      setTimeout(()=>{
+        resolve('Promise Resolved')
+      }, 3000);
+    })
+
+    const Obs4 = from(promise);
+    Obs4.subscribe(res=>{
+      console.log('from Promise =>', res);
+      this._designUtility.print(res, 'elContainer4')
+    })
+
+    //From - String
+    const Obs5 = from('Welcome to Atmiyata');
+    Obs5.subscribe(res=>{
+      console.log('from String =>', res);
+      this._designUtility.print(res, 'elContainer5')
     })
   }
 
