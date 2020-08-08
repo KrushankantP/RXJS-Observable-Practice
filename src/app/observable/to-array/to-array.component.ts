@@ -44,7 +44,7 @@ export class ToArrayComponent implements OnInit {
     source2.pipe(toArray())
       .subscribe(usersRes =>{
       console.log('Array of Object => ', usersRes);
-        this._designUtility.print(Users, 'elContainer2')
+        this._designUtility.print(usersRes, 'elContainer2')
     })
 
     //Another type of Observable Stream data converted into the "Array".
