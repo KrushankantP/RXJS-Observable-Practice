@@ -28,7 +28,7 @@ export class OfFromComponent implements OnInit {
     })
 
 
-    // From - Array
+    // From - Array => Whenever we want to use Array as Observable stream  we use From() operator.
       let Arr = ['Atmiyata','Shuhardbhav','Ekta']
     const Obs3= from(Arr);
     Obs3.subscribe(res=>{
