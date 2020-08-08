@@ -8,6 +8,7 @@ import { PromiseComponent } from './promise/promise.component';
 import { ObservableComponent } from './observable/observable.component';
 import { FromEventComponent } from './observable/from-event/from-event.component';
 import { ListComponent } from './observable/list/list.component';
+import { IntervalComponent } from './observable/interval/interval.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListComponent } from './observable/list/list.component';
     PromiseComponent,
     ObservableComponent,
     FromEventComponent,
-    ListComponent
+    ListComponent,
+    IntervalComponent
   ],
   imports: [
     BrowserModule,
