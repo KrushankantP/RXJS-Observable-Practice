@@ -9,6 +9,7 @@ import {DesignUtilityService} from '../../appServices/design-utility.service';
 })
 export class IntervalComponent implements OnInit {
   obsMsg;
+  display:boolean=false;
   videoSubscription: Subscription;
 
   constructor(private _designUtility: DesignUtilityService) { }
@@ -21,6 +22,7 @@ export class IntervalComponent implements OnInit {
     const broadcastVideos = timer(5000, 1000);
 
     this.videoSubscription =broadcastVideos.subscribe(res=>{
+      this.display=true;
       console.log(res);
       this.obsMsg = 'Video ' + res;
       this._designUtility.print(this.obsMsg, 'elContainer')
