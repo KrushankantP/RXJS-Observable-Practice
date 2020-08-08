@@ -7,16 +7,19 @@
 })
 export class PromiseComponent implements OnInit {
   promiseVAl:string
+
   dell={
     brand: 'Dell',
     hardDisk: '2 TB',
     color: 'black'
   }
+
   hp={
     brand:'Hp',
     hardDisk: '1 TB',
     color: 'silver'
   }
+
   notAvil={
     brand:'Not Available',
     status:'Failed'
@@ -65,6 +68,5 @@ export class PromiseComponent implements OnInit {
       console.log('catch code=>', res)
     })
   }
-
 
 }
