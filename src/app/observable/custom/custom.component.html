@@ -12,10 +12,9 @@
     <div class ="col-md-6">
       <strong> Ex - 02 (custom Interval Observable)</strong>
       <hr>
-      <ul class="techList">
-        <li>Angular</li>
-        <li>TypeScript</li>
-        <li>Html and Css</li>
+       <ul [ngClass]="techStatus2 == 'completed' ? 'completed' : techStatus2=='error'? 'error' : ''"
+        class="techList" id="elContainer2">
+
       </ul>
     </div>
   </div>
