@@ -1,0 +1,36 @@
+<div class="my-3">
+  <h2>From Event</h2>
+  <br>
+
+  <div  class="row">
+    <div class ="col-md-6">
+      <strong> Ex - 01 (Manual)</strong>
+      <hr>
+      <ul [ngClass]="techStatus == 'completed' ? 'completed' : techStatus=='error'? 'error' : ''"
+        class="techList" id="elContainer"></ul>
+    </div>
+    <div class ="col-md-6">
+      <strong> Ex - 02 (custom Interval Observable)</strong>
+      <hr>
+      <ul class="techList">
+        <li>Angular</li>
+        <li>TypeScript</li>
+        <li>Html and Css</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <p class="bg-light py-2 px-3 border rounded">
+      <strong> Ex- 03 (Random Names): </strong>
+      'patel', 'Krishna', 'Niramay', 'nixal', 'Atmiyata', 'Gunatit', 'Nishtha'
+    </p>
+    <hr>
+    <p> Current Name: <strong class="text-success">Krishna</strong></p>
+    <span class="badge badge-success">Success</span>
+  </div>
+</div>
+
+

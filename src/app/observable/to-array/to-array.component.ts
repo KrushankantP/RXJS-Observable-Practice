@@ -25,7 +25,7 @@ export class ToArrayComponent implements OnInit {
 
     const source =interval(1000) // this will emit numbers one by one after 1 seconds.
     this.sourceSub = source.pipe(
-      take(5), // this will take only five number.
+      take(5), // this will take only five number and unsubscribe the Observable Stream.
       toArray() // here it will convert that number into an Array.
     )
       .subscribe(res=>{
