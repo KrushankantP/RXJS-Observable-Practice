@@ -27,8 +27,9 @@
       'patel', 'Krishna', 'Niramay', 'nixal', 'Atmiyata', 'Gunatit', 'Nishtha'
     </p>
     <hr>
-    <p> Current Name: <strong class="text-success">Krishna</strong></p>
-    <span class="badge badge-success">Success</span>
+    <p> Current Name: <strong>{{names}}</strong></p>
+    <span [ngClass]="nameStatus == 'completed' ? 'badge-success' : nameStatus=='error'? 'badge-danger' : 'badge-primary'"
+          class="badge">{{nameStatus == 'completed' ? 'Success' : nameStatus=='error'? 'Error' : 'Running'}}</span>
   </div>
 </div>
 

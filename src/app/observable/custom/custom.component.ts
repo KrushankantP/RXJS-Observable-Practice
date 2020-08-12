@@ -11,6 +11,8 @@ export class CustomComponent implements OnInit, OnDestroy {
 
   techStatus;
   techStatus2;
+  names;
+  nameStatus;
   subs2: Subscription;
   constructor(private _designUtility: DesignUtilityService) { }
 
@@ -85,6 +87,34 @@ export class CustomComponent implements OnInit, OnDestroy {
     })
 
     //Ex - 03 (Random Names)
+    const Arr3 = ['patel', 'Krishna', 'Niramay', 'nixal', 'Atmiyata', 'Gunatit', 'Nishtha']
+    const cusObs3 = Observable.create(observer => {
+      let count =0;
+      setInterval(()=>{
+        observer.next(Arr3[count]);
+
+        if(count >=3){
+          observer.error('Error emit')
+        }
+
+        if(count >=6){
+          observer.complete()
+        }
+        count++;
+      }, 1000)
+    })
+
+    cusObs3.subscribe(res=>{
+      console.log(res);
+      this.names= res;
+    },
+      (error)=>{
+        this.nameStatus = 'error';
+      },
+
+      ()=> {
+        this.nameStatus = 'completed';
+      })
   }
 
   ngOnDestroy(){
