@@ -11,6 +11,7 @@ import {CustomComponent} from './observable/custom/custom.component';
 import {MapComponent} from './observable/map/map.component';
 import {PluckComponent} from './observable/pluck/pluck.component';
 import {FilterComponent} from './observable/filter/filter.component';
+import {TapComponent} from './observable/tap/tap.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
       {path: 'map', component:MapComponent},
       {path: 'pluck', component:PluckComponent},
       {path: 'filter', component:FilterComponent},
+      {path: 'tap', component:TapComponent},
     ]},
   {path: '**', redirectTo:'promise'}
 ];
