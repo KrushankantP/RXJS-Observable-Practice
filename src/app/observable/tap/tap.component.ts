@@ -20,7 +20,7 @@ export class TapComponent implements OnInit {
 
 
     //Ex-01
-    const Arr = ['Krishna', 'Patel', 'Nishan', 'Nixal', 'Kishan', 'Alex']
+    const Arr = ['Krishna', 'Patel', 'Nishan', 'Nixal', 'Kishan', 'Niramay']
     const source =interval(1500);
 
     let obsSubscription: Subscription;
