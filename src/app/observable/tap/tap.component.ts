@@ -10,7 +10,7 @@ import {DesignUtilityService} from '../../appServices/design-utility.service';
 })
 export class TapComponent implements OnInit {
 
-
+  myColor;
   //1. Tap Operator is useful to see that, what kind of data we will get,
   // after performing some operation such as Map, Filter, toArray and many others.
   constructor(private _designUtility: DesignUtilityService) { }
@@ -48,6 +48,7 @@ export class TapComponent implements OnInit {
 
     obsSubscription2 =  source.pipe(
       tap(res => {
+        this.myColor = colorArr[res];
           console.log('tap before => :' +res);
           if(res == 7) {
             obsSubscription2.unsubscribe()
