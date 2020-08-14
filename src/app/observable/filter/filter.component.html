@@ -13,10 +13,12 @@
         <tr>
           <th>Id</th>
           <th>Name</th>
+
         </tr>
-        <tr *ngFor="let item of data">
+        <tr *ngFor="let item of filterByLength">
           <td>{{item.id}}</td>
           <td>{{item.name}}</td>
+          <td>{{item.Gender}}</td>
         </tr>
       </table>
     </div>
@@ -31,10 +33,12 @@
         <tr>
           <th>Id</th>
           <th>Name</th>
+          <th>Gender</th>
         </tr>
-        <tr>
-          <td>id</td>
-          <td>name</td>
+        <tr *ngFor="let item of filterByGender">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.Gender}}</td>
         </tr>
       </table>
     </div>
@@ -49,10 +53,12 @@
         <tr>
           <th>Id</th>
           <th>Name</th>
+          <th>Gender</th>
         </tr>
-        <tr>
-          <td>id</td>
-          <td>name</td>
+        <tr *ngFor="let item of filterByNthItem">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.Gender}}</td>
         </tr>
       </table>
     </div>

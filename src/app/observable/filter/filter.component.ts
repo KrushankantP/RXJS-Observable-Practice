@@ -9,7 +9,10 @@ import {filter, toArray} from 'rxjs/operators';
 })
 export class FilterComponent implements OnInit {
 
-  data;
+  filterByLength;
+  filterByGender;
+  filterByNthItem;
+
   dataArr=[
     {id:1, name:'Krishna', Gender: 'Male'},
     {id:2, name:'Patel', Gender: 'Male'},
@@ -37,7 +40,30 @@ export class FilterComponent implements OnInit {
     )
       .subscribe(res=>{
         console.log(res);
-        this.data=res;
+        this.filterByLength = res;
+      })
+
+    //Ex - 02 - Filter by Gender.
+
+    source.pipe(
+      filter(member => member.Gender == 'Male'),
+      toArray()
+    )
+      .subscribe(res=>{
+        console.log(res);
+        this.filterByGender=res;
+      })
+
+
+    //Ex - 03 - Filter by Nth Items.
+
+    source.pipe(
+      filter(member => member.id <=6),
+      toArray()
+    )
+      .subscribe(res=>{
+        console.log(res);
+        this.filterByNthItem = res;
       })
   }
 
