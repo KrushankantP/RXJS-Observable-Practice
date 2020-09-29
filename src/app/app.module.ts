@@ -23,6 +23,7 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import { InMemoryDataService } from './in-memory-data.service';
 import { DebouncetimeComponent } from './observable/debouncetime/debouncetime.component';
 import {LoadingBarModule} from "@ngx-loading-bar/core";
+import { SubjectComponent } from './observable/subject/subject.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {LoadingBarModule} from "@ngx-loading-bar/core";
     TakeComponent,
     RetryComponent,
     DebouncetimeComponent,
+    SubjectComponent,
 
   ],
   imports: [
