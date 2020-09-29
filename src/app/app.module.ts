@@ -21,6 +21,8 @@ import { RetryComponent } from './observable/retry/retry.component';
 import { HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import { InMemoryDataService } from './in-memory-data.service';
+import { DebouncetimeComponent } from './observable/debouncetime/debouncetime.component';
+import {LoadingBarModule} from "@ngx-loading-bar/core";
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     TapComponent,
     TakeComponent,
     RetryComponent,
+    DebouncetimeComponent,
 
   ],
   imports: [
@@ -48,7 +51,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    LoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
