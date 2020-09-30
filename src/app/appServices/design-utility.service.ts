@@ -6,6 +6,8 @@ import {Subject} from "rxjs";
 })
 export class DesignUtilityService {
   exclusive = new Subject<boolean>();
+  userName = new Subject<string>();
+
   constructor() { }
   print(val, containerId){
     let el =document.createElement('li');
