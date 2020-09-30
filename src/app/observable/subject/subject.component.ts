@@ -7,7 +7,7 @@ import {DesignUtilityService} from "../../appServices/design-utility.service";
   styleUrls: ['./subject.component.scss']
 })
 export class SubjectComponent implements OnInit, OnDestroy {
-  userName:string ='Krushankant';
+  userName:string;
 
   constructor(private _designUtility: DesignUtilityService) {
     this._designUtility.userName.subscribe(res => {

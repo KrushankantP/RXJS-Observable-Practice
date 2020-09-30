@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Subject} from "rxjs";
+import {BehaviorSubject, Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DesignUtilityService {
   exclusive = new Subject<boolean>();
-  userName = new Subject<string>();
+  //For BehaviorSubject we can define Initial value like here we have defined but Subject don't accept initial value.
+  userName = new BehaviorSubject<string>('Krushankant');
 
   constructor() { }
   print(val, containerId){

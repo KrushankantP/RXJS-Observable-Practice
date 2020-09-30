@@ -8,7 +8,7 @@ import {DesignUtilityService} from "../../appServices/design-utility.service";
 })
 export class Comp3Component implements OnInit {
 
-  userName:string = 'Krushankant'
+  userName:string;
   constructor(private _designUtility: DesignUtilityService) {
     this._designUtility.userName.subscribe(res => {
       this.userName = res;
